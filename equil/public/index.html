@@ -74,9 +74,12 @@ https://www.tooplate.com/view/2124-vertex
              <!--Intro left -->
              
             <div class="tm-section-col tm-content">
-                <h1 class="tm-text-primary">EQUIL CONSTRUCTION</h1>
+                <div class="main-logo" style="display:flex;justify-content:center;align-items:center">
+                    <img src="./img/Equil Final Logo-02.png" alt="EQUIL ARCHITECTURAL Logo" style="height:180px;width:350px" />
+                </div>
+                <h1 class="tm-text-primary">EQUIL ARCHITECTURAL</h1>
                 <br>
-                <div class="tm-media">
+                <div id="gsapEl1" class="tm-media">
                     <img src="img/construct.jpg" alt="Intro image">
                     <div class="tm-media-body">
                         <!-- <h2><a href="#" class="tm-text-primary">Vertex is a Free CSS Template</a></h2> -->
@@ -90,7 +93,7 @@ https://www.tooplate.com/view/2124-vertex
                     </div>
                 </div>
     
-                <div class="tm-media">
+                <div id="gsapEl2" class="tm-media">
                     <img src="img/construction.jpg" alt="Intro image">
                     <div class="tm-media-body">
                         <!-- <h2><a href="#" class="tm-text-primary">Responsive and Parallax Images</a></h2> -->
@@ -103,7 +106,7 @@ https://www.tooplate.com/view/2124-vertex
                     </div>
                 </div>
                 
-                <div class="tm-media">
+                <div id="gsapEl3" class="tm-media">
                     <img src="img/building-constructions-500x500.jpg" alt="Intro image">
                     <div class="tm-media-body">
                         <!-- <h2><a href="#" class="tm-text-primary">Do you like this HTML layout?</a></h2> -->
@@ -476,7 +479,10 @@ https://www.tooplate.com/view/2124-vertex
         </div> <!-- #contact -->
     </main>
 
+    <script src="js/lib/gsap.min.js"></script>
+    <script src="js/lib/ScrollTrigger.min.js"></script>
     <script src="js/plugins.js"></script>
+    <script src="js/animations.js"></script>
     <script>
         $(window).on("load", function() {
             $('body').addClass('loaded');
@@ -524,9 +530,12 @@ https://www.tooplate.com/view/2124-vertex
 
             /****************** Gallery ******************/
 
-            const galleryItems = document.querySelector(".tm-gallery").children;
-            const itemsPerPage = 10;
-            const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
+            const hasGallery = $(".tm-gallery").length;
+            if (hasGallery) {
+                const galleryItems = document.querySelector(".tm-gallery").children;
+                const itemsPerPage = 10;
+                const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
+            }
             const pageAttribute = 'data-page';
 
             function setPagination(currentPage) {
@@ -564,8 +573,8 @@ https://www.tooplate.com/view/2124-vertex
                 }
             }
 
-            setPagination(1);
-            showItems(1);
+            hasGallery && setPagination(1);
+            hasGallery && showItems(1);
 
             /****************** Magnific Popup ***********/
 
