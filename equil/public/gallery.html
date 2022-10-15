@@ -160,15 +160,58 @@ https://www.tooplate.com/view/2124-vertex
              Services right 
             <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="img/vertex-bg-02.jpg"></div>
         </div>  #services -->
+<style>
+    #filterBtnsWrap {
+        display: flex;
+        justify-content: center;
+        column-gap: 1rem;
+    }
+    #filterBtnsWrap button {
+        outline: none;
+        border: none;
+        padding: .25rem .5rem;
+        background-color: #fff;
+        border-radius: 3px;
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+    #filterBtnsWrap button.active {
+        background-color: #9c9;
+    }
+</style>
 
         <div id="gallery" class="tm-content tm-content-small-top">
             <div class="tm-gallery-container">
                 <h2 class="tm-text-primary tm-text-right tm-gallery-header">Our Gallery</h2> 
+                <div id="filterBtnsWrap">
+                    <button data-tag="all" class="active">All</button>
+                    <button data-tag="topic-1">Topic 1</button>
+                    <button data-tag="topic-2">Topic 2</button>
+                </div>
                 <div class="tm-gallery tm-mb-80">
-                    <figure class="effect-goliath tm-gallery-item">
+                    <figure class="effect-goliath tm-gallery-item" data-tag="topic-1">
+                        <a href="img/vertex-bg-01.jpg">
+                            <img src="img/vertex-bg-01.jpg" alt="Gallery image" />
+                        </a>
+                    </figure>
+                    <figure class="effect-goliath tm-gallery-item" data-tag="topic-2">
+                        <a href="img/vertex-bg-02.jpg">
+                            <img src="img/vertex-bg-02.jpg" alt="Gallery image" />
+                        </a>
+                    </figure>
+                    <figure class="effect-goliath tm-gallery-item" data-tag="topic-1">
+                        <a href="img/vertex-bg-03.jpg">
+                            <img src="img/vertex-bg-03.jpg" alt="Gallery image" />
+                        </a>
+                    </figure>
+                    <figure class="effect-goliath tm-gallery-item" data-tag="topic-2">
+                        <img src="img/vertex-bg-04.jpg" alt="Gallery image" />
+                    </figure>
+                </div>
+                <!-- <div class="tm-gallery tm-mb-80"> -->
+                    <!-- <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p1/11 (2).jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number One</h2> -->
+                            <!~~ <h2>Number One</h2> ~~>
                             <p>1</p>
                             <a href="img/elevation/p1/port 2 (3).jpg">View more</a>
                         </figcaption>			
@@ -176,7 +219,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p2/photo_2021-05-06_23-09-591.jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number 2</h2> -->
+                            <!~~ <h2>Number 2</h2> ~~>
                             <p>2</p>
                             <a href="img/elevation/p2/2.jpg">View more</a>
                         </figcaption>			
@@ -184,7 +227,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p7/011.jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number 3</h2> -->
+                            <!~~ <h2>Number 3</h2> ~~>
                             <p>3</p>
                             <a href="img/elevation/p7/01.jpg">View more</a>
                         </figcaption>			
@@ -192,7 +235,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p12/12(1).jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number 4</h2> -->
+                            <!~~ <h2>Number 4</h2> ~~>
                             <p>4</p>
                             <a href="img/elevation/p12/photo_2021-05-06_23-10-42.jpg">View more</a>
                         </figcaption>			
@@ -200,7 +243,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p13/R02 (5).jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number 5</h2> -->
+                            <!~~ <h2>Number 5</h2> ~~>
                             <p>5</p>
                             <a href="img/elevation/p13/R02 (5).jpg">View more</a>
                         </figcaption>			
@@ -208,7 +251,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p2/r0011.jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number 6</h2> -->
+                            <!~~ <h2>Number 6</h2> ~~>
                             <p>6</p>
                             <a href="img/elevation/p2/r001.jpg">View more</a>
                         </figcaption>			
@@ -216,7 +259,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p2/r0061.jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number 7</h2> -->
+                            <!~~ <h2>Number 7</h2> ~~>
                             <p>7</p>
                             <a href="img/elevation/p2/r006.jpg">View more</a>
                         </figcaption>			
@@ -224,7 +267,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p13/R01 (5).jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number 8</h2> -->
+                            <!~~ <h2>Number 8</h2> ~~>
                             <p>8</p>
                             <a href="img/elevation/p13/R03 (4).jpg">View more</a>
                         </figcaption>			
@@ -232,7 +275,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p2/r0021.jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number 9</h2> -->
+                            <!~~ <h2>Number 9</h2> ~~>
                             <p>9</p>
                             <a href="img/elevation/p2/r002.jpg">View more</a>
                         </figcaption>			
@@ -240,7 +283,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p12/12(2).jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number 10</h2> -->
+                            <!~~ <h2>Number 10</h2> ~~>
                             <p>10</p>
                             <a href="img/elevation/p12/photo_2021-05-06_23-10-43.jpg">View more</a>
                         </figcaption>			
@@ -248,7 +291,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p3/2 (2).jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Picture 11</h2> -->
+                            <!~~ <h2>Picture 11</h2> ~~>
                             <p>11</p>
                             <a href="img/elevation/p3/2 (2).jpg">View more</a>
                         </figcaption>			
@@ -256,7 +299,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p4/R01.jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Item 12</h2> -->
+                            <!~~ <h2>Item 12</h2> ~~>
                             <p>12</p>
                             <a href="img/elevation/p4/R01.jpg">View more</a>
                         </figcaption>			
@@ -264,7 +307,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p5/photo_2021-05-06_23-08-35.jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number 13</h2> -->
+                            <!~~ <h2>Number 13</h2> ~~>
                             <p>13</p>
                             <a href="img/elevation/p5/photo_2021-05-06_23-08-35.jpg">View more</a>
                         </figcaption>			
@@ -272,7 +315,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p5/photo_2021-05-06_23-08-41.jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Picture 14</h2> -->
+                            <!~~ <h2>Picture 14</h2> ~~>
                             <p>14</p>
                             <a href="img/elevation/p5/photo_2021-05-06_23-08-41.jpg">View more</a>
                         </figcaption>			
@@ -280,7 +323,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p6/FINAL.jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Pic 15</h2> -->
+                            <!~~ <h2>Pic 15</h2> ~~>
                             <p>15</p>
                             <a href="img/elevation/p6/FINAL.jpg">View more</a>
                         </figcaption>			
@@ -288,7 +331,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p8/R01 (2).jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Pic 16</h2> -->
+                            <!~~ <h2>Pic 16</h2> ~~>
                             <p>16</p>
                             <a href="img/elevation/p8/R01 (2).jpg">View more</a>
                         </figcaption>			
@@ -296,7 +339,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p9/FINAL 02.jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number 17</h2> -->
+                            <!~~ <h2>Number 17</h2> ~~>
                             <p>17</p>
                             <a href="img/elevation/p9/FINAL 02.jpg">View more</a>
                         </figcaption>			
@@ -304,7 +347,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p11/R05.jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Pic 18</h2> -->
+                            <!~~ <h2>Pic 18</h2> ~~>
                             <p>18</p>
                             <a href="img/elevation/p11/R05.jpg">View more</a>
                         </figcaption>			
@@ -312,7 +355,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p11/R01 (3).jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Pic 19</h2> -->
+                            <!~~ <h2>Pic 19</h2> ~~>
                             <p>19</p>
                             <a href="img/elevation/p11/R01 (3).jpg">View more</a>
                         </figcaption>			
@@ -320,7 +363,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p11/R03 (3).jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number 20</h2> -->
+                            <!~~ <h2>Number 20</h2> ~~>
                             <p>20</p>
                             <a href="img/elevation/p11/R03 (3).jpg">View more</a>
                         </figcaption>			
@@ -328,7 +371,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p14/photo_2021-05-06_23-09-05.jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Pic 21</h2> -->
+                            <!~~ <h2>Pic 21</h2> ~~>
                             <p>21</p>
                             <a href="img/elevation/p14/photo_2021-05-06_23-09-05.jpg">View more</a>
                         </figcaption>			
@@ -336,7 +379,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p14/photo_2021-05-06_23-09-12.jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Pic 22</h2> -->
+                            <!~~ <h2>Pic 22</h2> ~~>
                             <p>22</p>
                             <a href="img/elevation/p14/photo_2021-05-06_23-09-12.jpg">View more</a>
                         </figcaption>			
@@ -344,7 +387,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p14/photo_2021-05-06_23-09-17.jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Pic 23</h2> -->
+                            <!~~ <h2>Pic 23</h2> ~~>
                             <p>23</p>
                             <a href="img/elevation/p14/photo_2021-05-06_23-09-17.jpg">View more</a>
                         </figcaption>			
@@ -352,7 +395,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p14/photo_2021-05-06_23-09-22.jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number 24</h2> -->
+                            <!~~ <h2>Number 24</h2> ~~>
                             <p>24</p>
                             <a href="img/elevation/p14/photo_2021-05-06_23-09-22.jpg">View more</a>
                         </figcaption>			
@@ -360,7 +403,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p13/R02 (5).jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number 25</h2> -->
+                            <!~~ <h2>Number 25</h2> ~~>
                             <p>25</p>
                             <a href="img/elevation/p13/R02 (5).jpg">View more</a>
                         </figcaption>			
@@ -368,7 +411,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p11/RO1.jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number 26</h2> -->
+                            <!~~ <h2>Number 26</h2> ~~>
                             <p>26</p>
                             <a href="img/elevation/p11/RO1.jpg">View more</a>
                         </figcaption>			
@@ -376,7 +419,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p11/R03 (3).jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number 27</h2> -->
+                            <!~~ <h2>Number 27</h2> ~~>
                             <p>27</p>
                             <a href="img/elevation/p11/R03 (3).jpg">View more</a>
                         </figcaption>			
@@ -384,7 +427,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p11/R04.jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number 28</h2> -->
+                            <!~~ <h2>Number 28</h2> ~~>
                             <p>28</p>
                             <a href="img/elevation/p11/R04.jpg">View more</a>
                         </figcaption>			
@@ -392,7 +435,7 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p4/R03.jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number 29</h2> -->
+                            <!~~ <h2>Number 29</h2> ~~>
                             <p>29</p>
                             <a href="img/elevation/p4/R03.jpg">View more</a>
                         </figcaption>			
@@ -400,12 +443,12 @@ https://www.tooplate.com/view/2124-vertex
                     <figure class="effect-goliath tm-gallery-item">
                         <img src="img/elevation/p5/photo_2021-05-06_23-08-38.jpg" alt="Image"/>
                         <figcaption>
-                            <!-- <h2>Number 30</h2> -->
+                            <!~~ <h2>Number 30</h2> ~~>
                             <p>30</p>
                             <a href="img/elevation/p5/photo_2021-05-06_23-08-38.jpg">View more</a>
                         </figcaption>			
-                    </figure>
-                </div>
+                    </figure> -->
+                <!-- </div> -->
                 <div class="tm-paging tm-mb-130"></div>
             </div>
         </div>
@@ -525,51 +568,64 @@ https://www.tooplate.com/view/2124-vertex
 
             /****************** Gallery ******************/
 
-            const hasGallery = $(".tm-gallery").length;
-            if (hasGallery) {
+            // const hasGallery = $(".tm-gallery").length;
+            /* if (hasGallery) {
                 const galleryItems = document.querySelector(".tm-gallery").children;
                 const itemsPerPage = 10;
                 const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
-            }
-            const pageAttribute = 'data-page';
-
-            function setPagination(currentPage) {
-                for(let i = 1; i <= totalPages; i++) {
-                    var $pager = '';
-                    
-                    if(currentPage == i) {
-                        $pager = $('<a href="javascript:void(0);" class="active tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
-                    } else {
-                        $pager = $('<a href="javascript:void(0);" class="tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
-                    }
-
-                    $pager.html(i);
-
-                    $pager.click(function(){ 
-                        $('.tm-paging-link').removeClass("active");
-                        $(this).addClass('active');
-                        var page = $(this).eq(0).attr(pageAttribute);
-                        showItems(page);
-                    });
-
-                    $pager.appendTo($('.tm-paging'));
-                }
-            }
-
-            function showItems(currentPage) {
-                for(let i = 0; i < galleryItems.length; i++) {
-                    galleryItems[i].classList.remove("show");
-                    galleryItems[i].classList.add("hide");
-
-                    if(i >= (currentPage * itemsPerPage) - itemsPerPage && i < currentPage * itemsPerPage) {
-                        galleryItems[i].classList.remove("hide");
-                        galleryItems[i].classList.add("show");
+                const pageAttribute = 'data-page';
+    
+                function setPagination(currentPage) {
+                    for(let i = 1; i <= totalPages; i++) {
+                        var $pager = '';
+                        
+                        if(currentPage == i) {
+                            $pager = $('<a href="javascript:void(0);" class="active tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                        } else {
+                            $pager = $('<a href="javascript:void(0);" class="tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                        }
+    
+                        $pager.html(i);
+    
+                        $pager.click(function(){ 
+                            $('.tm-paging-link').removeClass("active");
+                            $(this).addClass('active');
+                            var page = $(this).eq(0).attr(pageAttribute);
+                            showItems(page);
+                        });
+    
+                        $pager.appendTo($('.tm-paging'));
                     }
                 }
-            }
+    
+                function showItems(currentPage) {
+                    for(let i = 0; i < galleryItems.length; i++) {
+                        galleryItems[i].classList.remove("show");
+                        galleryItems[i].classList.add("hide");
+    
+                        if(i >= (currentPage * itemsPerPage) - itemsPerPage && i < currentPage * itemsPerPage) {
+                            galleryItems[i].classList.remove("hide");
+                            galleryItems[i].classList.add("show");
+                        }
+                    }
+                }
+    
+                setPagination(1);
+                showItems(1);
+            } */
 
-            hasGallery && setPagination(1);
-            hasGallery && showItems(1);
+        /* --- Gallery Filters --- */
+        $("#filterBtnsWrap button").click(function(){
+            const $this = $(this);
+            const $curTag = $this.data("tag");
+            $("#filterBtnsWrap button").removeClass("active");
+            $this.addClass("active");
+            $(".tm-gallery figure").each(function(){
+                $(this).hide()
+                if ($curTag==="all") return $(this).fadeIn()
+                $(this).data("tag")===$curTag && $(this).fadeIn()
+            })
+        })
 
             /****************** Magnific Popup ***********/
 

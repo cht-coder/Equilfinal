@@ -15,6 +15,17 @@ Tooplate 2124 Vertex
 https://www.tooplate.com/view/2124-vertex
 
 -->
+    <style>
+        #mainLogo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #mainLogo img {
+            height: 180px;
+            width: 350px;
+        }
+    </style>
 
 </head>
 <body>
@@ -29,9 +40,9 @@ https://www.tooplate.com/view/2124-vertex
 
     <!-- Site logo -->
     <h1 class="tm-brand">
-        <i class="fas fa-mountain fa-2x tm-brand-icon"></i>
+        <!-- <i class="fas fa-mountain fa-2x tm-brand-icon"></i> -->
         <!-- <span class="tm-brand-text">Equil</span>         -->
-        <img src="img/Equil Final Logo-02.png" style="height: 180px;width: 350px;"> 
+        <!-- <img src="img/Equil Final Logo-02.png" style="height: 180px;width: 350px;">  -->
     </h1>
 
     <!-- Nav -->
@@ -414,6 +425,9 @@ https://www.tooplate.com/view/2124-vertex
         <div id="about" class="tm-section">
             <!-- About left -->
             <div class="tm-section-col tm-content tm-content-small">
+                <div id="mainLogo">
+                    <img src="./img/Equil Final Logo-02.png" alt="EQUIL ARCHITECTURAL Logo" />
+                </div>
                 <h2 class="tm-text-primary">About Us</h2>
                 <h4 class="tm-text-primary">Our Team</h4>
                 <p>
@@ -532,46 +546,46 @@ https://www.tooplate.com/view/2124-vertex
                 const galleryItems = document.querySelector(".tm-gallery").children;
                 const itemsPerPage = 10;
                 const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
-            }
-            const pageAttribute = 'data-page';
-
-            function setPagination(currentPage) {
-                for(let i = 1; i <= totalPages; i++) {
-                    var $pager = '';
-                    
-                    if(currentPage == i) {
-                        $pager = $('<a href="javascript:void(0);" class="active tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
-                    } else {
-                        $pager = $('<a href="javascript:void(0);" class="tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
-                    }
-
-                    $pager.html(i);
-
-                    $pager.click(function(){ 
-                        $('.tm-paging-link').removeClass("active");
-                        $(this).addClass('active');
-                        var page = $(this).eq(0).attr(pageAttribute);
-                        showItems(page);
-                    });
-
-                    $pager.appendTo($('.tm-paging'));
-                }
-            }
-
-            function showItems(currentPage) {
-                for(let i = 0; i < galleryItems.length; i++) {
-                    galleryItems[i].classList.remove("show");
-                    galleryItems[i].classList.add("hide");
-
-                    if(i >= (currentPage * itemsPerPage) - itemsPerPage && i < currentPage * itemsPerPage) {
-                        galleryItems[i].classList.remove("hide");
-                        galleryItems[i].classList.add("show");
+                const pageAttribute = 'data-page';
+    
+                function setPagination(currentPage) {
+                    for(let i = 1; i <= totalPages; i++) {
+                        var $pager = '';
+                        
+                        if(currentPage == i) {
+                            $pager = $('<a href="javascript:void(0);" class="active tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                        } else {
+                            $pager = $('<a href="javascript:void(0);" class="tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                        }
+    
+                        $pager.html(i);
+    
+                        $pager.click(function(){ 
+                            $('.tm-paging-link').removeClass("active");
+                            $(this).addClass('active');
+                            var page = $(this).eq(0).attr(pageAttribute);
+                            showItems(page);
+                        });
+    
+                        $pager.appendTo($('.tm-paging'));
                     }
                 }
+    
+                function showItems(currentPage) {
+                    for(let i = 0; i < galleryItems.length; i++) {
+                        galleryItems[i].classList.remove("show");
+                        galleryItems[i].classList.add("hide");
+    
+                        if(i >= (currentPage * itemsPerPage) - itemsPerPage && i < currentPage * itemsPerPage) {
+                            galleryItems[i].classList.remove("hide");
+                            galleryItems[i].classList.add("show");
+                        }
+                    }
+                }
+    
+                setPagination(1);
+                showItems(1);
             }
-
-            hasGallery && setPagination(1);
-            hasGallery && showItems(1);
 
             /****************** Magnific Popup ***********/
 
