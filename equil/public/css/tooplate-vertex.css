@@ -556,6 +556,16 @@ figure.effect-goliath:hover p {
     margin-bottom: -50px;
 }
 
+#mainLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mainLogo img {
+    height: 180px;
+    width: 350px;
+}
+
 @media (max-width: 1200px) {
     .tm-nav { width: 0; }
     .tm-nav ul {
